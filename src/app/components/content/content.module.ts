@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ContentPageRoutingModule } from './content-routing.module';
+import { ContentComponentRoutingModule } from './content-routing.module';
 
-import { ContentPage } from './content.page';
+import { ContentComponent } from './content.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ContentPageRoutingModule
+    ContentComponentRoutingModule,
   ],
-  declarations: [ContentPage]
+  declarations: [ContentComponent],
 })
-export class ContentPageModule {}
+export class ContentComponentModule {}

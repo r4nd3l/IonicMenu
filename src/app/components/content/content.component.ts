@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-content',
-  templateUrl: './content.page.html',
-  styleUrls: ['./content.page.scss'],
+  templateUrl: './content.component.html',
+  styleUrls: ['./content.component.scss'],
 })
-export class ContentPage implements OnInit {
+export class ContentComponent implements OnInit {
   level: any = null;
 
   constructor(private route: ActivatedRoute) {}

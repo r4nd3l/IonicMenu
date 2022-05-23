@@ -5,17 +5,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPage } from './menu.page';
+import { MenuComponent } from './menu.component';
 
 const routes: Routes = [
   {
     path: 'menu',
-    component: MenuPage,
+    component: MenuComponent,
     children: [
       {
         path: 'details/:level',
         loadChildren: () =>
-          import('../content/content.module').then((m) => m.ContentPageModule),
+          import('../content/content.module').then(
+            (m) => m.ContentComponentModule
+          ),
       },
     ],
   },
@@ -32,6 +34,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [MenuPage],
+  declarations: [MenuComponent],
 })
-export class MenuPageModule {}
+export class MenuComponentModule {}
